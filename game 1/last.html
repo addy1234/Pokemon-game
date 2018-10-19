@@ -4,7 +4,7 @@
 <style>
     #mycanvas { 
                 
-                border : 5px solid orange;
+                border : 5px solid red;
         background:url(assets/back3.png);
         background-size: cover;
                
@@ -14,7 +14,7 @@
     
 </head>
 <body>
-    <canvas id="mycanvas" width=1200 height=600></canvas>
+    <canvas id="mycanvas" width=1200 height=700></canvas>
     <script >
         function loadImages(){
             playerImage= new Image;
@@ -138,7 +138,8 @@ function update(){
 }
 function draw(){
     console.log("in draw");
-    pen.clearRect(0,0,W,H);
+    
+    pen.clearRect(0,0,W+1,H+1);
     
     for(var i=0;i<enemies.length;i++){
     pen.drawImage(enemyImage,enemies[i].x,enemies[i].y,enemies[i].w,enemies[i].h);
